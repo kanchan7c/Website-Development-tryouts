@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 10px;
+            margin: 10px;
+            /* box-shadow: 2px 2px grey; */
+        }
+
+        header::before {
+            content: "";
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?AI');
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.6;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 2px 2px tomato;
+            color: aquamarine;
+            margin: auto;
+        }
+
+        #firstsection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #container {
+            margin: 10px;
+            padding: 10px;
+            height: 100px;
+            width: auto;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            font-size: 0.8em;
+
+        }
+
+        .para {
+            border: 3px ridge rgb(6, 78, 78);
+            padding: 3px;
+            border-radius: 10px;
+            margin: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(162, 199, 247);
+            background-color: rgb(2, 45, 56);
+            opacity: 0.8;
+            font-size: 14px;
+            transition: all;
+            transition-duration: 0.5s;
+        }
+
+        .para:hover {
+            background-color: rgb(118, 235, 102);
+            color: black;
+            cursor: pointer;
+            height: 150px;
+            font-size: 18px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 3px ridge rgb(53, 54, 54);
+            margin: 436px;
+            margin-top: 20px;
+            border-radius: 7px;
+            box-shadow: 2px 2px 2px grey;
+        }
+
+        #email,
+        #password,
+        #loginBtn {
+            margin: 10px;
+            padding: 10px;
+            border: 3px ridge rgb(53, 54, 54);
+            font-size: 20px;
+            border-radius: 7px;
+            width: 474px;
+            text-align: center;
+        }
+
+        #loginBtn {
+            width: 234px;
+            height: 50px;
+            border-radius: 14px;
+            box-shadow: 2px 2px 2px grey;
+        }
+
+        #email:hover,
+        #password:hover {
+            cursor: pointer;
+        }
+
+        #loginBtn:hover,
+        a:hover {
+            cursor: pointer;
+            background-color: grey;
+            color: white;
+        }
+
+        .menubar {
+            font-size: 20px;
+            text-shadow: 1px 1px var(--bcolor);
+        }
+
+        :root {
+            --bcolor: red;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .box {
+            display: flex;
+            position: relative;
+            height: 20px;
+            width: 20px;
+            border-radius: 60px;
+            /* background-color: aqua; */
+            background-image: url('https://source.unsplash.com/random');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px ridge rgb(204, 252, 204);
+            padding: 20px;
+            margin-top: -844px;
+            margin-left: 23px;
+            justify-content: center;
+            align-items: center;
+            animation: scroll;
+            animation-duration: 10s;
+            /* animation-fill-mode: alternate; */
+            animation-iteration-count: infinite;
+            cursor: pointer;
+            /* animation-timing-function: ease; */
+        }
+
+        @keyframes scroll {
+            0% {
+                margin-left: 23px;
+            }
+
+            25% {
+                margin-left: 469px;
+            }
+
+            50% {
+                margin-left: 908px;
+            }
+
+            75% {
+                margin-left: 1373px;
+            }
+
+            100% {
+                margin-left: 23px;
+            }
+        }
+
+        h3 {
+            padding: 38px;
+            text-shadow: 2px 2px rgb(26, 99, 99);
+        }
+
+        .box a {
+            color: rgb(204, 252, 204);
+            background: none;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="menubar">
+            <ul>
+                <li class="menu"> <a href="#">Home</a> </li>
+                <li class="menu"><a href="#">About us</a></li>
+                <li class="menu"><a href="#">Services </a></li>
+                <li class="menu"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="firstsection">
+        <h1>Welcome to my tech blog!</h1>
+        <h3>Play a short game: Guess the image and click to see the source</h3>
+    </section>
+    <section id="secondsection">
+        <div id="container">
+            <div class="para" id="card1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt beatae veritatis
+                saepe expedita velit quibusdam magni debitis animi, ratione laboriosam vitae voluptate ea blanditiis,
+                omnis id voluptates deserunt cumque nobis repellendus esse harum nemo, possimus officia provident!
+                Placeat, optio amet?</div>
+            <div class="para" id="card2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt beatae veritatis
+                saepe expedita velit quibusdam magni debitis animi, ratione laboriosam vitae voluptate ea blanditiis,
+                omnis id voluptates deserunt cumque nobis repellendus esse harum nemo, possimus officia provident!
+                Placeat, optio amet?</div>
+            <div class="para" id="card3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt beatae veritatis
+                saepe expedita velit quibusdam magni debitis animi, ratione laboriosam vitae voluptate ea blanditiis,
+                omnis id voluptates deserunt cumque nobis repellendus esse harum nemo, possimus officia provident!
+                Placeat, optio amet?</div>
+        </div>
+    </section>
+    <section id="thirdsection">
+        <form action="#">
+            <input type="email" name="" id="email" placeholder="Enter your email">
+            <input type="password" name="" id="password" placeholder="Enter your password">
+            <input type="button" value="Login" id="loginBtn">
+        </form>
+    </section>
+    <div class="box"><a href="https://source.unsplash.com/" target="_blank">O</a></div>
+</body>
+
+</html>
