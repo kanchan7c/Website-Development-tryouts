@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | JQuery Dynamic content</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            margin: 15em auto;
+            background: rgb(16, 236, 213);
+            background: linear-gradient(354deg, rgba(16, 236, 213, 1) 0%, rgba(13, 19, 222, 1) 81%);
+        }
+
+        label,
+        input,
+        button,
+        label {
+            padding: clamp(0.5rem, 2vh, 1rem);
+            margin: 0.5em 0;
+            font-size: 1.5rem;
+            display: inline-block;
+        }
+
+        label {
+            height: 2rem;
+            width: auto;
+            color: #d2821ef2;
+            font-weight: 900;
+            font-size: 3em;
+        }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            width: 5rem;
+            background-color: coral;
+            border: none;
+            border-radius: 8px;
+            margin: 0.5em;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <label>Enter the numbers: </label>
+    <input id="number1" type="number" placeholder="number1">
+    <input id="number2" type="number" placeholder="number2">
+    <input id="result" placeholder="Result in here">
+    <div class="buttonContainer">
+        <button id="add" type="submit">+</button>
+        <button id="subtract" type="submit">-</button>
+        <button id="clear" type="submit">Clear</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#add").click(function () {
+                const number1 = $("#number1").val();
+                const number2 = $("#number2").val();
+                let result = Number(number1) + Number(number2);
+                $("#result").val(result);
+            });
+
+            $("#subtract").click(function () {
+                const number1 = $("#number1").val();
+                const number2 = $("#number2").val();
+                let result = Number(number1) - Number(number2);
+                $("#result").val(result);
+            });
+
+            $("#clear").click(function () {
+                $("#number1").val(" ");
+                $("#number2").val(" ");
+                $("#result").val(" ");
+            });
+        });
+    </script>
+</body>
+
+</html>
